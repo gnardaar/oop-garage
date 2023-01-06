@@ -64,29 +64,29 @@ class UI(denverParking):
         super().__init__()
 
     def run():
-        denverParking = denverParking([], [], {})
+        adenverParking = denverParking([], [], {})
         print("Welcome to Denver Parking, only $10 per hour!")
         while True:
             ticketResponse = input("Would you like to park in Denver today? Type 'y' or 'n'. " )
             if ticketResponse.lower() == "y":
-                denverParking.enter([], [])
+                adenverParking.enter([], [])
                 while True:
                     payResponse = input("Would you like to pay for your parking time and leave? Type 'y' or 'n'. ")
                     if payResponse.lower() == "y":
-                        denverParking.pay()
+                        adenverParking.pay()
                         while True:
                             leaveResponse = input("Would you like to leave? Type 'y' or 'n'.")
                             if leaveResponse.lower() == "y":
-                                denverParking.leave()
+                                adenverParking.leave()
                                 break
                             elif leaveResponse.lower() == "n":
                                 print("dude parking here is only 10 dollars, you can stay as long as you have the monies!")
-                                denverParking.pay()
+                                adenverParking.pay()
                             else:
                                 print("Error, please enter 'y', or 'n'.")
                     elif payResponse.lower() == "n":
                         print("dude parking here is only 10 dollars, you can stay as long as you have the monies!")
-                        denverParking.pay
+                        adenverParking.pay
                     else:
                         print("Error, please enter 'y', or 'n'.")
             elif ticketResponse.lower() == "n":
